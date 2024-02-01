@@ -1,0 +1,55 @@
+#include<stdio.h>
+
+int main() {
+    printf("Benvenuto al gioco delle domande!\n");
+    int scelta;
+
+    do {
+        printf("\nMenu di scelta:\n");
+        printf("A) Iniziare una nuova partita\n");
+        printf("B) Uscire dal gioco\n");
+        printf("Scelta: ");
+        scanf(" %c", &scelta);
+
+        if (scelta == 'A' || scelta == 'a') {
+            char nome[50];
+            int punteggio = 0;
+
+            printf("\nInserisci il tuo nome:\n");
+            scanf("%s", nomescelto)
+            // Domande
+            printf("\nDomanda 1: Qual è la capitale dell'Italia?\n");
+            printf("A) Roma\nB) Parigi\nC) Berlino\n");
+            char risposta1;
+            scanf(" %c", &risposta1);
+            if (risposta1 == 'A' || risposta1 == 'a') {
+                punteggio++;
+            }
+
+            printf("\nDomanda 2: Quanto fa 5 + 3?\n");
+            printf("A) 7\nB) 8\nC) 10\n");
+            char risposta2;
+            scanf(" %c", &risposta2);
+            if (risposta2 == 'B' || risposta2 == 'b') {
+                punteggio++;
+            }
+
+            printf("\nDomanda 3: Qual è il simbolo chimico dell'acqua?\n");
+            printf("A) H2O\nB) CO2\nC) O2\n");
+            char risposta3;
+            scanf(" %c", &risposta3);
+            if (risposta3 == 'A' || risposta3 == 'a') {
+                punteggio++;
+            }
+
+            printf("\nFine partita! Il tuo punteggio è: %d\n", punteggio);
+        } else if (scelta == 'B' || scelta == 'b') {
+            printf("Arrivederci!\n");
+        } else {
+            printf("Scelta non valida. Riprova.\n");
+        }
+
+    } while (scelta != 'B' && scelta != 'b');
+
+    return 0;
+}
